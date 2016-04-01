@@ -14,7 +14,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             int number = 3;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<int>3</int>", xml, "Can't Serialize Int");
+            Assert.AreEqual("<?xml version='2.0'?>\n<int>3</int>", xml, "This was not the expected xml for Int");
 
         }
         [TestMethod]
@@ -23,7 +23,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             uint number = 3;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<uint>3</uint>", xml, "Can't Serialize UInt");
+            Assert.AreEqual("<?xml version='2.0'?>\n<uint>3</uint>", xml, "This was not the expected xml for UInt");
 
         }
 
@@ -33,7 +33,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             long number = 3302;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<long>3302</long>", xml, "Can't Serialize Long");
+            Assert.AreEqual("<?xml version='2.0'?>\n<long>3302</long>", xml, "This was not the expected xml for Long");
 
         }
 
@@ -43,7 +43,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             ulong number = 332;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<ulong>332</ulong>", xml, "Can't Serialize ULong");
+            Assert.AreEqual("<?xml version='2.0'?>\n<ulong>332</ulong>", xml, "This was not the expected xml for ULong");
 
         }
 
@@ -53,7 +53,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             short number = -3;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<short>-3</short>", xml, "Can't Serialize Short");
+            Assert.AreEqual("<?xml version='2.0'?>\n<short>-3</short>", xml, "This was not the expected xml for Short");
 
         }
 
@@ -63,7 +63,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             ushort number = 3;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<ushort>3</ushort>", xml, "Can't Serialize Short");
+            Assert.AreEqual("<?xml version='2.0'?>\n<ushort>3</ushort>", xml, "This was not the expected xml for Short");
 
         }
 
@@ -73,7 +73,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             byte number = 2;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<byte>2</byte>", xml, "Can't Serialize Byte");
+            Assert.AreEqual("<?xml version='2.0'?>\n<byte>2</byte>", xml, "This was not the expected xml for Byte");
 
         }
 
@@ -83,7 +83,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             sbyte number = 2;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<sbyte>2</sbyte>", xml, "Can't Serialize SByte");
+            Assert.AreEqual("<?xml version='2.0'?>\n<sbyte>2</sbyte>", xml, "This was not the expected xml for SByte");
 
         }
 
@@ -93,7 +93,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             bool number = true;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<bool>True</bool>", xml, "Can't Serialize Bool");
+            Assert.AreEqual("<?xml version='2.0'?>\n<bool>True</bool>", xml, "This was not the expected xml for Bool");
 
         }
 
@@ -103,7 +103,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             float number = 200;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<float>200</float>", xml, "Can't Serialize Float");
+            Assert.AreEqual("<?xml version='2.0'?>\n<float>200</float>", xml, "This was not the expected xml for Float");
 
         }
 
@@ -113,7 +113,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             double number = 2.5;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<double>2.5</double>", xml, "Can't Serialize Double");
+            Assert.AreEqual("<?xml version='2.0'?>\n<double>2.5</double>", xml, "This was not the expected xml for Double");
 
         }
 
@@ -123,7 +123,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             decimal number = 2;
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<decimal>2</decimal>", xml, "Can't Serialize Decimal");
+            Assert.AreEqual("<?xml version='2.0'?>\n<decimal>2</decimal>", xml, "This was not the expected xml for Decimal");
 
         }
 
@@ -135,7 +135,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             int[] number = new []{5, 6, 3};
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<int>5</int>\n<int>6</int>\n<int>3</int>\n</array>", xml, "Can't Serialize Int Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<int>5</int>\n<int>6</int>\n<int>3</int>\n</array>", xml, "This was not the expected xml for Int Array");
 
         }
         [TestMethod]
@@ -144,7 +144,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             uint[] number = new uint[] { 5, 6, 3 };
             var xml = serializer.Serialize(number);
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<uint>5</uint>\n<uint>6</uint>\n<uint>3</uint>\n</array>", xml, "Can't Serialize UInt Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<uint>5</uint>\n<uint>6</uint>\n<uint>3</uint>\n</array>", xml, "This was not the expected xml for UInt Array");
 
         }
 
@@ -153,7 +153,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new long[]{5,6,3});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<long>5</long>\n<long>6</long>\n<long>3</long>\n</array>", xml, "Can't Serialize Long Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<long>5</long>\n<long>6</long>\n<long>3</long>\n</array>", xml, "This was not the expected xml for Long Array");
 
         }
 
@@ -162,7 +162,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new ulong[] { 5, 6, 3 });
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<ulong>5</ulong>\n<ulong>6</ulong>\n<ulong>3</ulong>\n</array>", xml, "Can't Serialize ULong Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<ulong>5</ulong>\n<ulong>6</ulong>\n<ulong>3</ulong>\n</array>", xml, "This was not the expected xml for ULong Array");
 
         }
 
@@ -171,7 +171,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new short[]{7,4,3});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<short>7</short>\n<short>4</short>\n<short>3</short>\n</array>", xml, "Can't Serialize Short Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<short>7</short>\n<short>4</short>\n<short>3</short>\n</array>", xml, "This was not the expected xml for Short Array");
 
         }
 
@@ -180,7 +180,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new ushort[]{4,5,2});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<ushort>4</ushort>\n<ushort>5</ushort>\n<ushort>2</ushort>\n</array>", xml, "Can't Serialize UShort Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<ushort>4</ushort>\n<ushort>5</ushort>\n<ushort>2</ushort>\n</array>", xml, "This was not the expected xml for UShort Array");
 
         }
 
@@ -189,7 +189,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new byte[]{3,5,6});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<byte>3</byte>\n<byte>5</byte>\n<byte>6</byte>\n</array>", xml, "Can't Serialize Byte Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<byte>3</byte>\n<byte>5</byte>\n<byte>6</byte>\n</array>", xml, "This was not the expected xml for Byte Array");
 
         }
 
@@ -198,7 +198,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new sbyte[] { 3, 5, 6 });
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<sbyte>3</sbyte>\n<sbyte>5</sbyte>\n<sbyte>6</sbyte>\n</array>", xml, "Can't Serialize SByte Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<sbyte>3</sbyte>\n<sbyte>5</sbyte>\n<sbyte>6</sbyte>\n</array>", xml, "This was not the expected xml for SByte Array");
 
         }
 
@@ -207,7 +207,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new bool[]{false, true, true});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<bool>False</bool>\n<bool>True</bool>\n<bool>True</bool>\n</array>", xml, "Can't Serialize Bool Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<bool>False</bool>\n<bool>True</bool>\n<bool>True</bool>\n</array>", xml, "This was not the expected xml for Bool Array");
 
         }
 
@@ -216,7 +216,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new float[]{200, 500, 394});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<float>200</float>\n<float>500</float>\n<float>394</float>\n</array>", xml, "Can't Serialize Float Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<float>200</float>\n<float>500</float>\n<float>394</float>\n</array>", xml, "This was not the expected xml for Float Array");
 
         }
 
@@ -225,7 +225,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new double[]{2.6, 6.3, 9.5});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<double>2.6</double>\n<double>6.3</double>\n<double>9.5</double>\n</array>", xml, "Can't Serialize Double Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<double>2.6</double>\n<double>6.3</double>\n<double>9.5</double>\n</array>", xml, "This was not the expected xml for Double Array");
 
         }
 
@@ -234,7 +234,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new decimal[]{2, 6, 9});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<decimal>2</decimal>\n<decimal>6</decimal>\n<decimal>9</decimal>\n</array>", xml, "Can't Serialize Decimal Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<decimal>2</decimal>\n<decimal>6</decimal>\n<decimal>9</decimal>\n</array>", xml, "This was not the expected xml for Decimal Array");
 
         }
 
@@ -245,7 +245,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             string str = "ponys";
             var xml = serializer.Serialize(str);
-            Assert.AreEqual("<?xml version='2.0'?>\n<string>ponys</string>", xml, "Can't Serialize String");
+            Assert.AreEqual("<?xml version='2.0'?>\n<string>ponys</string>", xml, "This was not the expected xml for String");
         }
 
         [TestMethod]
@@ -253,7 +253,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new string[]{"ponys", "arcoiris", "narwhals"});
-            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<string>ponys</string>\n<string>arcoiris</string>\n<string>narwhals</string>\n</array>", xml, "Can't Serialize String Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<array>\n<string>ponys</string>\n<string>arcoiris</string>\n<string>narwhals</string>\n</array>", xml, "This was not the expected xml for String Array");
         }
 
         //Tests for Date Time
@@ -264,7 +264,7 @@ namespace Serializer.Tests
             var serializer = new XmlSerializer(2);
             string now = DateTime.Now.ToString();
             var xml = serializer.Serialize(DateTime.Now);
-            Assert.AreEqual("<?xml version='2.0'?>\n<DateTime>" + now + "</DateTime>", xml, "Can't Serialize DateTime");
+            Assert.AreEqual("<?xml version='2.0'?>\n<DateTime>" + now + "</DateTime>", xml, "This was not the expected xml for DateTime");
         }
 
         [TestMethod]
@@ -274,7 +274,7 @@ namespace Serializer.Tests
             string now = DateTime.Now.ToString();
             string today = DateTime.Today.ToString();
             var xml = serializer.Serialize(new DateTime []{DateTime.Now, DateTime.Today});
-            Assert.AreEqual("<?xml version='2.0'?>\n<DateArray>\n<DateTime>" + now + "</DateTime>\n<DateTime>" + today + "</DateTime>\n</DateArray>", xml, "Can't Serialize DateTime Array");
+            Assert.AreEqual("<?xml version='2.0'?>\n<DateArray>\n<DateTime>" + now + "</DateTime>\n<DateTime>" + today + "</DateTime>\n</DateArray>", xml, "This was not the expected xml for DateTime Array");
         }
 
         //Tests for Classes
@@ -284,7 +284,7 @@ namespace Serializer.Tests
         {
             var serializer = new XmlSerializer(2);
             var xml = serializer.Serialize(new Person(12, "Hoxton"));
-            Assert.AreEqual("<?xml version='2.0'?>\n<Person>\n<Age>\n<int>12</int>\n</Age>\n<Name>\n<string>Hoxton</string>\n</Name>\n</Person>", xml, "Can't Serialize Class");
+            Assert.AreEqual("<?xml version='2.0'?>\n<Person>\n<Age>\n<int>12</int>\n</Age>\n<Name>\n<string>Hoxton</string>\n</Name>\n</Person>", xml, "This was not the expected xml for Class");
 
         }
 
@@ -296,7 +296,7 @@ namespace Serializer.Tests
             var xml = serializer.Serialize(new Person[]{new Person(6, "DogeMan"), new Person(15, "Mario"), new Person(8, "Spidey")});
             Assert.AreEqual("<?xml version='2.0'?>\n<Person>\n<Age>\n<int>6</int>\n</Age>\n<Name>\n<string>DogeMan</string>\n</Name>\n</Person>" +
                             "\n<Person>\n<Age>\n<int>15</int>\n</Age>\n<Name>\n<string>Mario</string>\n</Name>\n</Person>" +
-                            "\n<Person>\n<Age>\n<int>8</int>\n</Age>\n<Name>\n<string>Spidey</string>\n</Name>\n</Person>", xml, "Can't Serialize Class");
+                            "\n<Person>\n<Age>\n<int>8</int>\n</Age>\n<Name>\n<string>Spidey</string>\n</Name>\n</Person>", xml, "This was not the expected xml for Class Array");
 
         }
 
@@ -310,7 +310,7 @@ namespace Serializer.Tests
                             "\n<string>Chubi</string>\n</Name>\n<Owner>\n<Person>" +
                             "\n<Age>\n<int>20</int>\n</Age>\n<Name>\n<string>DogeMan</string>" +
                             "\n</Name>\n</Person>\n</Owner>\n<Hunger>\n<bool>True</bool>\n" +
-                            "</Hunger>\n</Kitten>", xml, "Can't Serialize Class");
+                            "</Hunger>\n</Kitten>", xml, "This was not the expected xml for Class with Custom Attribute");
 
         }
 
@@ -338,7 +338,7 @@ namespace Serializer.Tests
                             "\n</Kitten>\n<Kitten>\n<Name>\n<string>Darker</string>" +
                             "\n</Name>\n<Owner>\n<Person>\n<Age>\n<int>30</int>\n</Age>" +
                             "\n<Name>\n<string>Batman</string>\n</Name>\n</Person>" +
-                            "\n</Owner>\n<Hunger>\n<bool>True</bool>\n</Hunger>\n</Kitten>", xml, "Can't Serialize Class");
+                            "\n</Owner>\n<Hunger>\n<bool>True</bool>\n</Hunger>\n</Kitten>", xml, "This was not the expected xml for Class Array with Custom Attribute");
 
         }
 
